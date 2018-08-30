@@ -47,9 +47,9 @@ var drawBarChart = function() {
    */
   var margin = {
     top:    15,
-    right:  35, // leave space for y-axis
+    right:  10, // leave space for y-axis
     bottom: 30, // leave space for x-axis
-    left:   10
+    left:   35
   };
 
   // now we can calculate how much space we have to plot
@@ -112,7 +112,7 @@ var drawBarChart = function() {
   // now lets draw our x- and y-axis
   // these require our x (letter) and y (count) scales
   var xAxis = d3.axisBottom(letterScale);
-  var yAxis = d3.axisRight(countScale);
+  var yAxis = d3.axisLeft(countScale);
 
   // check if we have already drawn our axes
   if (plot.select("g#y-axis").size() < 1) {
@@ -128,7 +128,7 @@ var drawBarChart = function() {
     // do the same for our y axix
     var yGroup = plot.append("g").attr("id", "y-axis");
     yGroup.call(yAxis);
-    yGroup.attr("transform", "translate(" + plotWidth + ",0)");
+    yGroup.attr("transform", "translate(0,0)");
   }
   else {
     // we need to do this so our chart updates

@@ -21,7 +21,7 @@ textarea {
   /* position the textarea on top of the svg */
   position: fixed;
   top: 5px;
-  left: 5px;
+  left: 545px;
 
   margin: 0px;
   padding: 5px;
@@ -50,7 +50,7 @@ svg {
 
 rect.bar {
   stroke: none;
-  fill: #a3005c;
+  fill: #8470ff;
 }
 
 #x-axis text,
